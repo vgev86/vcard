@@ -4,13 +4,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     handleFormSubmission();
 }
 ?>
-<!-- Your HTML and form for registration -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
     <title>Admin Panel</title>
 </head>
 <body>
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label for="telegram">Telegram</label>
             <input type="text" id="telegram" name="telegram">
 
-            <label for="dob">Date of Birth as Text</label>
+            <label for="dob">Date of Birth</label>
             <input type="text" id="dob" name="dob">
 
             <label for="photo">Photo</label>

@@ -1,8 +1,5 @@
 <?php
 include 'admin_functions.php';
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    handleFormSubmission();
-}
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/admin.css">
-</center><title>vCard Admin Panel</title><center>
+    <title>Admin Panel</title>
 </head>
 <body>
     <div class="container">
@@ -28,9 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <label for="jobTitle">Job Title</label>
             <input type="text" id="jobTitle" name="jobTitle">
-
-            <label for="companyLogo">Company Logo</label>
-            <input type="file" id="companyLogo" name="companyLogo">
 
             <label for="officePhone">Office Phone</label>
             <input type="tel" id="officePhone" name="officePhone">

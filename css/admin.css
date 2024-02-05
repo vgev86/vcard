@@ -60,7 +60,7 @@ input[type="submit"]:hover {
 body {
     background-image: url('/files/bg.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: fill;
     color: #333;
 }
 

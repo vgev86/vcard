@@ -24,9 +24,13 @@ include 'qr_functions.php';
         if (isset($_GET['userId'])) {
             $userId = $_GET['userId'];
             $qrCodeData = generateQRCodeData($userId);
+            $qrCodePath = $qrCodeData['path'];
 
             // Display the generated QR code
-            echo '<img src="' . $qrCodeData . '" alt="QR Code">';
+            echo '<img src="' . $qrCodePath . '" alt="QR Code">';
+
+            // Provide a download link
+            echo '<p><a href="' . $qrCodePath . '" download="' . $userId . '.png">Download QR Code</a></p>';
         }
         ?>
     </div>

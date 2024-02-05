@@ -1,6 +1,6 @@
 <?php
 function handleFormSubmission() {
-    // Connect to your MySQL database (replace placeholders with your actual credentials)
+    
     $servername = "localhost";
     $username = "vcardactrade_vcardu";
     $password = "kA$IFvM{d~0g";

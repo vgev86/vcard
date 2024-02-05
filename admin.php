@@ -1,5 +1,11 @@
 <?php
-include 'admin_functions.php';
+session_start(); // Start a session for handling login status
+
+// Check if the admin is logged in, redirect to login page if not
+if (!isset($_SESSION['admin_logged_in']) || !$_SESSION['admin_logged_in']) {
+    header("Location: login.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -11,8 +17,12 @@ include 'admin_functions.php';
     <title>Admin Panel</title>
 </head>
 <body>
+    <header>
+        <img src="path/to/your/logo.png" alt="Logo">
+        <a href="home.php">Home</a>
+    </header>
     <div class="container">
-        <h2>Admin Panel</h2>
+        <h2>Welcome to the Admin Panel</h2>
         <form action="/admin.php" method="POST" enctype="multipart/form-data">
             <label for="name">Name *</label>
             <input type="text" id="name" name="name" required>

@@ -12,7 +12,7 @@ $verification_token = md5(uniqid(rand(), true));
 // Make sure to escape input to prevent SQL injection
 
 // Send email with verification link
-$verification_link = "https://yourdomain.com/verify.php?token=$verification_token";
+$verification_link = "https://vcard.actrade.am/verify.php?token=$verification_token";
 $subject = "Email Verification";
 $message = "Hello $name,\n\nPlease click the following link to verify your email address:\n$verification_link";
 $headers = "From: your_email@example.com";

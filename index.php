@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vCard - ACTrade</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="vCard Logo">
+        <img src="files/logo.png" alt="vCard Logo">
         <nav>
             <a href="admin.php" class="button">Admin Panel</a>
             <a href="userinfo.php" class="button">User Information</a>

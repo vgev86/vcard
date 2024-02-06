@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Registration</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo">
+        <img src="file/logo.png" alt="Logo">
         <a href="https://vcard.actrade.am/home.php">Home</a>
     </header>
     <div class="container">

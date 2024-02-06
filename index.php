@@ -11,8 +11,11 @@
         <img src="files/logo.png" alt="vCard Logo">
         <nav>
             <a href="admin.php" class="button">Admin Panel</a>
-            <a href="userinfo.php" class="button">User Information</a>
             <a href="generateqr.php" class="button">Generate QR Code</a>
+            <form action="userinfo.php" method="GET">
+                <input type="text" name="id" placeholder="Search by ID">
+                <button type="submit" class="button">Search</button>
+            </form>
             <a href="register.php" class="button">Register</a>
             <a href="login.php" class="button">Login</a>
         </nav>

@@ -3,81 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>AcTrade vCard</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: top center;
-            justify-content: top center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: rgba(244, 244, 244, 0.5);
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: top center;
-            background-color: transparent;
-            padding: 20px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .logo {
-            width: 150px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .container button {
-            margin: 10px;
-        }
-
-        .container form {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        /* Additional styles to move admin panel and generate button to the upper right corner */
-        .container button:nth-child(1),
-        .container button:nth-child(3) {
-            margin: 0;
-            margin-right: 10px;
-        }
-
-        /* Center the form in the container */
-        .container form {
-            margin-top: 10px;
-        }
-    </style>
+    <title>Admin Registration</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
-        <div>
-            <img class="logo" src="/files/logo.png" alt="Company Logo" oneclick="location.href='https://actrade-soft.com'">
-            
-        </div>
-        <div>
-            <button onclick="location.href='/admin.php';">Admin Panel</button>
-            <button onclick="location.href='/generateqr.php';">Generate QR Code</button>
-        </div>
-    </div>
-
+    <header>
+        <img src="logo.png" alt="Logo">
+        <a href="https://vcard.actrade.am/home.php">Home</a>
+    </header>
     <div class="container">
-        <form action="/userinfo.php" method="GET">
-            <label for="userId">Search by ID:</label>
-            <input type="text" id="userId" name="userId" required>
-            <input type="submit" value="Search">
+        <h2>Admin Registration</h2>
+        <form action="register_process.php" method="post">
+            <!-- Form fields here -->
         </form>
     </div>
 </body>

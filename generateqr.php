@@ -8,7 +8,7 @@ include 'qr_functions.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generate QR Code</title>
-    <link rel="stylesheet" href="ccss/styles.cs">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">

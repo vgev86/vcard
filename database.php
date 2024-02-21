@@ -1,19 +1,21 @@
 <?php
- $servername = "localhost";
- $username = "vcardactrade_vcardu";
- $password = "kA$IFvM{d~0g";
- $dbname = "vcardactrade_vcard";
+// database.php
+$host = 'localhost';
+$db = 'vcardactrade_vcard';
+$user = 'vcardactrade_vcardu';
+$pass = 'kA$IFvM{d~0g';
+$charset = 'utf8mb4';
 
-//$servername = "localhost";
-//$username = "your_username";
-//$password = "your_password";
-//$dbname = "your_dbname";
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+try {
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 ?>

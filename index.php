@@ -1,67 +1,32 @@
-<?php
-session_start();
-
-// Placeholder for database connection (Assume $conn as the connection variable)
-// $conn = new mysqli("localhost", "username", "password", "database");
-
-// Check login status
-if (isset($_POST['action']) && $_POST['action'] == 'login') {
-    // Placeholder for login verification logic
-    // $_SESSION['admin_logged_in'] = true or false based on verification
-}
-
-// Check if logging out
-if (isset($_GET['action']) && $_GET['action'] == 'logout') {
-    unset($_SESSION['admin_logged_in']);
-    session_destroy();
-}
-
-// Placeholder for registration form submission handling
-if (isset($_POST['action']) && $_POST['action'] == 'register') {
-    // Registration logic here
-}
-
-// Placeholder for user information form submission handling
-if (isset($_POST['action']) && $_POST['action'] == 'submit_user_info') {
-    // User information submission and QR code generation logic here
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprehensive Admin Panel</title>
+    <title>vCard - ACTrade</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<?php if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in']): ?>
-    <h2>Admin Panel</h2>
-    <a href="?action=logout">Logout</a>
-    
-    <!-- User Information Form -->
-    <form action="index.php" method="post">
-        <!-- Include all user information fields here -->
-        <input type="hidden" name="action" value="submit_user_info">
-        <input type="submit" value="Submit User Information">
-    </form>
-    
-    <!-- Possibly include QR code generation result display here -->
-    
-<?php else: ?>
-    <h2>Login</h2>
-    <form action="index.php" method="post">
-        <!-- Login Form Fields -->
-        <input type="hidden" name="action" value="login">
-        <input type="submit" value="Login">
-    </form>
-    
-    <h2>Register</h2>
-    <form action="index.php" method="post">
-        <!-- Registration Form Fields -->
-        <input type="hidden" name="action" value="register">
-        <input type="submit" value="Register">
-    </form>
-<?php endif; ?>
+    <header>
+        <img src="files/logo.png" alt="vCard Logo">
+        <nav>
+         <a href="generateqr.php" class="button">Generate QR Code</a>
+            <form action="userinfo.php" method="GET">
+                <input type="text" name="id" placeholder="Search by ID">
+                <button type="submit" class="button">Search</button>
+            </form>
+            <a href="register.php" class="button">Register</a>
+            <a href="login.php" class="button">Login</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Welcome to vCard</h1>
+            <p>This is a platform for managing and sharing digital business cards.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 vCard - ACTrade</p>
+    </footer>
 </body>
 </html>

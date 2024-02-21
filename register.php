@@ -1,33 +1,28 @@
-<?php
-// Include necessary files
-require_once 'src/Database.php';
-require_once 'src/User.php';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration</title>
+    <link rel="stylesheet" href="css/styles.css">
 
-// Assuming form data is sent via POST method
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Instantiate User object
-    $user = new User();
+</head>
+<body>
+    <h2>Admin Registration</h2>
+    <form action="register_process.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
 
-    // Set user properties from form data
-    $user->name = $_POST['name'];
-    $user->surname = $_POST['surname'];
-    // Continue setting other properties...
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-    // Validate and upload photo
-    // This is a simplified version; you'll need to add security checks and error handling
-    $target_directory = "data/users/photos/";
-    $target_file = $target_directory . basename($_FILES["photo"]["name"]);
-    if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file)) {
-        echo "The file ". htmlspecialchars(basename($_FILES["photo"]["name"])). " has been uploaded.";
-    } else {
-        echo "Sorry, there was an error uploading your file.";
-    }
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
 
-    // Save user to database
-    if($user->save()) {
-        echo "User registered successfully.";
-    } else {
-        echo "User could not be registered.";
-    }
-}
-?>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
